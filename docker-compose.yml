@@ -1,0 +1,7 @@
+services:
+  dravenx-codex:
+    build: .
+    container_name: dravenx-codex
+    restart: unless-stopped
+    env_file:
+      - .env
