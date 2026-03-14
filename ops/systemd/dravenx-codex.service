@@ -1,0 +1,17 @@
+[Unit]
+Description=DravenX Codex Discord Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dravenx-codex
+EnvironmentFile=/opt/dravenx-codex/.env
+ExecStart=/usr/bin/node /opt/dravenx-codex/src/index.js
+Restart=always
+RestartSec=5
+User=dravenx
+Group=dravenx
+
+[Install]
+WantedBy=multi-user.target
